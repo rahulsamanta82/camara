@@ -10,7 +10,7 @@ const Getimage = () => {
     // Fetch images from backend on component mount
     const fetchImages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/get-data');
+        const response = await axios.get('https://server-userdetails-camera.onrender.com/get-data');
         console.log(response.data.data[0].data.data) // Adjust the URL as needed
         const imagesWithUrls = response.data.data.map((image) => {
             const byteArray = new Uint8Array(image.data.data); // Create a Uint8Array from the buffer data

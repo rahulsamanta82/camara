@@ -47,7 +47,7 @@ function AnimatedComponent() {
     const formData = new FormData();
     formData.append("img", imageFile);
 
-    axios.post('http://localhost:5000/send-data', formData, {
+    axios.post('https://server-userdetails-camera.onrender.com/send-data', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
